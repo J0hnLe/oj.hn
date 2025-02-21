@@ -5,7 +5,7 @@ description: "Looks like you made a typo. oj.hn is a personal site for John Le, 
 url: "https://oj.hn" # Your site's URL
 baseurl: "" # The subpath of your site, if any (e.g., /blog)
 
-# Build settings
+gems: [jekyll-paginate, kramdown]
 markdown: kramdown
 permalink: pretty
 
