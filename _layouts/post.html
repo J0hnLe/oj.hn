@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>{{ page.title }} | oj.hn</title>
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://oj.hn/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-300 select-none">
+    <header class="flex justify-between items-center p-4">
+        <div class="text-lg font-mono text-gray-300 typing-effect">
+            <bold class="font-extrabold">></bold> <a class="font-extrabold" href="https://oj.hn/">oj.hn</a>
+        </div>
+        <nav class="flex space-x-4">
+            <a href="#" id="themeToggle" class="text-gray-300 hover:text-gray-100"><i class="fas fa-adjust"></i></a>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center justify-center text-center">
+        <div class="w-full max-w-4xl mx-auto px-4 py-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-100 mb-4">{{ page.title }}</h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-8">{{ page.date | date: "%B %d, %Y" }}</p>
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                {{ content }}
+            </article>
+            <div class="mt-8">
+                <a href="{{ site.baseurl }}/" class="text-gray-400 hover:text-gray-100">← Back to Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const body = document.body;
+            const isDark = body.classList.contains('bg-gray-900');
+            if (isDark) {
+                body.classList.remove('bg-gray-900', 'text-gray-300');
+                body.classList.add('bg-gray-100', 'text-gray-900');
+                document.querySelectorAll('.bg-gray-800').forEach(el => {
+                    el.classList.remove('bg-gray-800');
+                    el.classList.add('bg-white');
+                });
+                document.querySelectorAll('.text-gray-100').forEach(el => {
+                    el.classList.remove('text-gray-100');
+                    el.classList.add('text-gray-900');
+                });
+                document.querySelectorAll('.text-gray-400').forEach(el => {
+                    el.classList.remove('text-gray-400');
+                    el.classList.add('text-gray-600');
+                });
+                document.querySelectorAll('.hover\\:text-gray-100').forEach(el => {
+                    el.classList.remove('hover:text-gray-100');
+                    el.classList.add('hover:text-gray-900');
+                });
+            } else {
+                body.classList.remove('bg-gray-100', 'text-gray-900');
+                body.classList.add('bg-gray-900', 'text-gray-300');
+                document.querySelectorAll('.bg-white').forEach(el => {
+                    el.classList.remove('bg-white');
+                    el.classList.add('bg-gray-800');
+                });
+                document.querySelectorAll('.text-gray-900').forEach(el => {
+                    el.classList.remove('text-gray-900');
+                    el.classList.add('text-gray-100');
+                });
+                document.querySelectorAll('.text-gray-600').forEach(el => {
+                    el.classList.remove('text-gray-600');
+                    el.classList.add('text-gray-400');
+                });
+                document.querySelectorAll('.hover\\:text-gray-900').forEach(el => {
+                    el.classList.remove('hover:text-gray-900');
+                    el.classList.add('hover:text-gray-100');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
