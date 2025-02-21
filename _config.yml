@@ -1,0 +1,43 @@
+# _config.yml
+
+title: "oj.hn"
+description: "Looks like you made a typo. oj.hn is a personal site for John Le, where the unthought-of becomes reality."
+url: "https://oj.hn" # Your site's URL
+baseurl: "" # The subpath of your site, if any (e.g., /blog)
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Author information
+author:
+  name: "John Le"
+  email: "john@johnle.org"
+
+# Social media links
+social:
+  twitter: "your_twitter_handle"
+  github: "9-5"
+  linkedin: "your_linkedin_profile"
+  email: "john@johnle.org"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files and directories from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - _config.yml
+
+# Include additional settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      excerpt_separator: "<!--more-->"
