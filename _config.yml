@@ -7,7 +7,7 @@ baseurl: "" # The subpath of your site, if any (e.g., /blog)
 
 gems: [jekyll-paginate, kramdown]
 markdown: kramdown
-permalink: pretty
+permalink: /:title/
 
 # Author information
 author:
