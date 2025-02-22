@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - oj.hn</title>
+    <meta name="description" content="Explore the blog posts of John Le, where the unthought-of becomes reality.">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+    {{ content }}
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const body = document.body;
+            const isDark = body.classList.contains('bg-gray-900');
+            if (isDark) {
+                body.classList.remove('bg-gray-900', 'text-gray-300');
+                body.classList.add('bg-gray-100', 'text-gray-900');
+            } else {
+                body.classList.remove('bg-gray-100', 'text-gray-900');
+                body.classList.add('bg-gray-900', 'text-gray-300');
+            }
+        });
+    </script>
+</body>
+</html>
