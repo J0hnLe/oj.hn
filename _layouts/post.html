@@ -24,7 +24,9 @@
     </header>
         <main class="mt-6">
             <section class="border border-gray-800 p-4 mb-6">
-                <h2 class="text-lg font-bold mb-2 text-gray-100">Table of Contents</h2>
+                <h1 class="text-3xl font-bold text-gray-100 mb-4">{{ page.title }}</h1>
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                <h2 class="text-lg font-bold mb-2 text-gray-100">Sections</h2>
                 <ul class="list-none pl-0">
                     {% for section in page.sections %}
                         <li><a class="text-gray-300 hover:text-gray-100 hover:underline" href="#{{ section.id }}">{{ section.title }}</a></li>
