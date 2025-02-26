@@ -79,6 +79,49 @@
             }
             modalImg.src = images[currentIndex].src;
         }
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const body = document.body;
+            const isDark = body.classList.contains('bg-gray-900');
+            if (isDark) {
+                body.classList.remove('bg-gray-900', 'text-gray-300');
+                body.classList.add('bg-gray-100', 'text-gray-900');
+                document.querySelectorAll('.bg-gray-800').forEach(el => {
+                    el.classList.remove('bg-gray-800');
+                    el.classList.add('bg-white');
+                });
+                document.querySelectorAll('.text-gray-100').forEach(el => {
+                    el.classList.remove('text-gray-100');
+                    el.classList.add('text-gray-900');
+                });
+                document.querySelectorAll('.text-gray-400').forEach(el => {
+                    el.classList.remove('text-gray-400');
+                    el.classList.add('text-gray-600');
+                });
+                document.querySelectorAll('.hover\\:text-gray-100').forEach(el => {
+                    el.classList.remove('hover:text-gray-100');
+                    el.classList.add('hover:text-gray-900');
+                });
+            } else {
+                body.classList.remove('bg-gray-100', 'text-gray-900');
+                body.classList.add('bg-gray-900', 'text-gray-300');
+                document.querySelectorAll('.bg-white').forEach(el => {
+                    el.classList.remove('bg-white');
+                    el.classList.add('bg-gray-800');
+                });
+                document.querySelectorAll('.text-gray-900').forEach(el => {
+                    el.classList.remove('text-gray-900');
+                    el.classList.add('text-gray-100');
+                });
+                document.querySelectorAll('.text-gray-600').forEach(el => {
+                    el.classList.remove('text-gray-600');
+                    el.classList.add('text-gray-400');
+                });
+                document.querySelectorAll('.hover\\:text-gray-900').forEach(el => {
+                    el.classList.remove('hover:text-gray-900');
+                    el.classList.add('hover:text-gray-100');
+                });
+            }
+        });
     </script>
 </body>
 </html>
