@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://oj.hn/css/main.css" rel="stylesheet">
+    <title>404 Not Found</title>
+</head>
+<body class="bg-gray-900 text-gray-300 flex flex-col min-h-screen">
+    <header class="flex justify-between items-center p-4">
+        <div class="text-lg font-mono text-gray-300">
+            <bold class="font-extrabold">></bold> <a class="font-extrabold" href="https://oj.hn/">oj.hn</a>
+        </div>
+        <nav class="flex space-x-4">
+            <a href="#" id="themeToggle" class="text-gray-300 hover:text-gray-100"><i class="fas fa-adjust"></i></a>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center justify-center text-center flex-grow">
+        <div class="text-6xl md:text-8xl font-bold text-gray-100 mb-4">
+            ERROR
+        </div>
+        <div class="text-4xl md:text-6xl font-bold text-gray-100 mb-4 flex items-center justify-center space-x-2">
+            <span class="shrink-out inline-block">0</span>
+            <span class="inline-block">4</span>
+            <span class="expand-in inline-block align-baseline">.</span>
+            <span class="inline-block">4</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-400 mb-8">
+            <span>This is not the page you are looking for.</span>
+        </p>
+        <a href="https://oj.hn/" class="mt-4 text-lg text-gray-300 hover:text-gray-100 underline">
+            <=== oj.hn
+        </a>
+    </main>
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
