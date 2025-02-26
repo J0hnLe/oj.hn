@@ -74,7 +74,7 @@ sections:
   </ul>
 </section>
 
-<section id ="technical-architecture">
+<section id="technical-architecture">
   <h2 class="text-3xl font-bold text-gray-100 mb-4">Technical Architecture</h2>
   <p>The extension is built on modern web technologies and best practices:</p>
   <ul class="list-disc list-inside mb-4">
