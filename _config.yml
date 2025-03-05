@@ -1,9 +1,10 @@
 # _config.yml
 
 title: "oj.hn"
-description: "Looks like you made a typo. oj.hn is a personal site for John Le, where the unthought-of becomes reality."
+description: "Where the unthought-of becomes reality. Personal site for John Le, software engineer and tech enthusiast."
 url: "https://oj.hn" # Your site's URL
 baseurl: "" # The subpath of your site, if any (e.g., /blog)
+keywords: "John Le, software engineer, tech, projects, programming, development, software development"
 
 gems: [jekyll-paginate, kramdown]
 markdown: kramdown
@@ -16,9 +17,8 @@ author:
 
 # Social media links
 social:
-  twitter: "your_twitter_handle"
   github: "9-5"
-  linkedin: "your_linkedin_profile"
+  linkedin: "johnle"
   email: "john@johnle.org"
 
 # Plugins
@@ -31,7 +31,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - _config.yml
+  - node_modules
+  - package.json
+  - package-lock.json
 
 # Include additional settings
 defaults:
@@ -41,3 +43,4 @@ defaults:
     values:
       layout: "post"
       excerpt_separator: "<!--more-->"
+      image: "default-post-image.jpg"

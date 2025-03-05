@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - oj.hn</title>
-    <meta name="description" content="Explore the blog posts of John Le, where the unthought-of becomes reality.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://oj.hn/css/main.css">
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 </head>
 <body class="bg-gray-900 text-gray-300">
     {{ content }}
